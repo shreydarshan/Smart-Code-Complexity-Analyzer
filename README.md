@@ -50,14 +50,30 @@ It works by analyzing patterns in the code such as loops, nested structures, rec
 
 ##  How to Run Locally
 
-```bash
-pip install flask
-python app.py
+Follow these steps to run the project on your system:
 
----
+  1. Clone the repository
+     git clone https://github.com/shreydarshan/Smart-Code-Complexity-Analyzer.git
+     cd Smart-Code-Complexity-Analyzer
+  2. Install dependencies
+     pip install flask
+  3. Run the application
+     python app.py
+  4. Open in browser
+     Go to:
+     http://127.0.0.1:5000
+
+ ---
+
+ ---
 
 ##  Author
 
 **Shrey Darshan**  
 GitHub: https://github.com/shreydarshan  
 LinkedIn: https://www.linkedin.com/in/shrey-darshan-69431732a  
+      
+     
+     
+   
+
