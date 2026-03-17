@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Code Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Smart Code Complexity Analyzer</h1>
+
+<form method="post">
+    <textarea name="code" placeholder="Paste your code here..." required>{{ code_input }}</textarea>
+    <button type="submit">Analyze Code</button>
+</form>
+
+{% if complexity %}
+<div class="card result">
+    <h2>Estimated Complexity: {{ complexity }}</h2>
+</div>
+
+<div class="card">
+    <h3>Analysis Details</h3>
+    <p><strong>Total Loops:</strong> {{ loop_count }}</p>
+    <p><strong>Nesting Depth:</strong> {{ max_depth }}</p>
+    <p><strong>Recursion Detected:</strong> {{ recursion }}</p>
+    <p><strong>Sorting Used:</strong> {{ sorting }}</p>
+</div>
+
+<div class="card">
+    <h3>Insights</h3>
+    <ul>
+        {% for i in insights %}
+        <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
